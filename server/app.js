@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => res.send('Hello World!'));
+
 app.get('/random-movie', (req, res) => {
   const baseUrl = 'https://api.themoviedb.org/3/discover/movie?language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false';
   const apiKey = '&api_key=a4e49dd08b747a35c0862c17c3ce6dc5';
@@ -36,9 +36,14 @@ app.get('/random-movie', (req, res) => {
     })
   }) 
   .catch(err => {
-      res.redirect('/error');
+      console.error(err);
   });
 });
 
+app.get('/best-movie-ever', (req,res) => {
+  fetch('http://www.omdbapi.com/?i=tt0120915&apikey=fc59ed8f')
+  .then(res => res.json())
+  .then(movie => res.send(movie));
+})
 
 app.listen(port, () => console.log(`Listening at http://localhost:${port}`));
