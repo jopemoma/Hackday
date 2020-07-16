@@ -1,4 +1,20 @@
+body {
+  background-color: #FFE;
+}
+.navbar {
+  background-color: rgb(185, 221, 187);
+  padding: 1px;
+}
+.jumbotron {
+  padding: 0;
 
+  margin-bottom: 2px;
+  background-color: #FFE;
+}
+.lead {
+  padding: 0;
+  margin: 0;
+}
 .lds-spinner {
   color: official;
   display: inline-block;
