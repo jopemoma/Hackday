@@ -12,7 +12,7 @@ const Movie = props => {
       );
     }
     return (
-        <Link to={props.movies[props.i].imdbRating >= props.movies[props.o].imdbRating ? `/winner/${props.i}` : `/loser/${props.i}`}> 
+        <Link to={props.movies[props.i].imdbRating < props.movies[props.o].imdbRating ? `/winner/${props.i}` : `/loser/${props.i}`}> 
       <div className="card mh-30" style={{"width": "18rem"}}>
         <img className="card-img-top" src={props.movies[props.i].Poster} alt={props.movies[props.i].Title} />
         <div className="card-body d-flex flex-column align-items-center flex-wrap">

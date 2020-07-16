@@ -24,13 +24,14 @@ class BestMovieEver extends React.Component {
       </div>);
     }
     return (
-      <div className="BestMovieEver">
-      <img alt={this.state.movie.Title} src={this.state.movie.Poster} />
-      <img alt="Best actor ever" src="../images/jarjar.jpeg" />
-      <p>{this.state.movie.Title}</p>
-      <p>{this.state.movie.Year}</p>
-      <button onClick={() => {window.location.reload()}}><Link to='/' >Back to the game</Link> </button>
-    </div>
+      <div className="card best-movie" style={{"width": "18rem"}}>
+        <img className="card-img-top" alt="Best actor ever" src="../images/jarjar.jpeg"/>
+        <div className="card-body d-flex flex-column align-items-center flex-wrap">
+          <h5 className="card-title">{this.state.movie.Title}</h5>
+          <p className="card-text">{this.state.movie.Year}</p>
+          <button className="btn btn-warning" onClick={() => {window.location.reload()}}><Link to='/' >Back to the game</Link> </button>
+        </div>
+      </div>
     )
   }
 }

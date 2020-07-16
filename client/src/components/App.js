@@ -43,7 +43,9 @@ class App extends React.Component {
       <div>
         <Switch>
           <Route path='/bestmovieever'>
-            <BestMovieEver />
+            <div className="d-flex flex-column align-items-center  h-100">
+              <BestMovieEver />
+            </div>
           </Route>
           <Route path='/winner/:movie' render={ (props) => (<><Winner {...props} movies={this.state.movies} reRender={this.reRender} /></>) } ></Route>
           <Route path='/loser/:movie' render={ (props) => (<><Loser {...props} movies={this.state.movies} reRender={this.reRender} /></>) } ></Route>
