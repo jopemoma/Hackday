@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Loser = props => {
+  if(!props.movies || props.movies.length <2 ) {
+    return (
+    <div className="lds-spinner">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div>
+    </div>
+    );
+  }
   return (
     <div className="result card text-center">
       <div className="card-body">
