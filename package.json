@@ -1,0 +1,24 @@
+{
+  "name": "worst-movie",
+  "version": "1.0.0",
+  "description": "guess which is the worst movie",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd server && nodemon ./app.js",
+    "client": " cd client && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jopemoma/Hackday.git"
+  },
+  "author": "Jorge Moreno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jopemoma/Hackday/issues"
+  },
+  "homepage": "https://github.com/jopemoma/Hackday#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
