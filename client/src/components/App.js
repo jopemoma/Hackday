@@ -1,8 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import '../styles/App.css';
 import Movie from './Movie';
-import BestMovieEver from './BestMovieEver';
 import Winner from './Winner';
 import Loser from './Loser';
 
@@ -28,25 +27,8 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <nav className="navbar navbar-expand-lg navbar-light">
-          <Link to='/' className="navbar-brand" >WichMovieWorst</Link>
-
-            <ul className="navbar-nav ">
-              <li className="nav-link">
-                <Link to='/' className="nav-link">Home<span className="sr-only">(current)</span></Link> 
-              </li>
-              <li className="nav-link">
-                <Link to='/bestmovieever' className="nav-link">Best Movie Ever</Link>
-              </li>
-            </ul>
-        </nav>
       <div>
         <Switch>
-          <Route path='/bestmovieever'>
-            <div className="d-flex flex-column align-items-center  h-100">
-              <BestMovieEver />
-            </div>
-          </Route>
           <Route path='/winner/:movie' render={ (props) => (<><Winner {...props} movies={this.state.movies} reRender={this.reRender} /></>) } ></Route>
           <Route path='/loser/:movie' render={ (props) => (<><Loser {...props} movies={this.state.movies} reRender={this.reRender} /></>) } ></Route>
           <Route path='/' render={ (props) => (
