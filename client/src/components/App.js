@@ -29,8 +29,8 @@ class App extends React.Component {
       <BrowserRouter>
       <div>
         <Switch>
-          <Route path='/winner/:movie' render={ (props) => (<><Winner {...props} movies={this.state.movies} reRender={this.reRender} /></>) } ></Route>
-          <Route path='/loser/:movie' render={ (props) => (<><Loser {...props} movies={this.state.movies} reRender={this.reRender} /></>) } ></Route>
+          <Route path='/winner/:movie' render={ (props) => (<><Winner {...props} movies={this.state.movies} /></>) } ></Route>
+          <Route path='/loser/:movie' render={ (props) => (<><Loser {...props} movies={this.state.movies} /></>) } ></Route>
           <Route path='/' render={ (props) => (
             <>
               <div className="jumbotron jumbotron-fluid mh-10">

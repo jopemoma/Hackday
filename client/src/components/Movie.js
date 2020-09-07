@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 const Movie = props => {
+
     if(!props.movies || props.movies.length <2 ) {
       return (
       <div className="lds-spinner">
@@ -11,6 +12,7 @@ const Movie = props => {
       </div>
       );
     }
+    
     return (
         <Link to={props.movies[props.i].imdbRating < props.movies[props.o].imdbRating ? `/winner/${props.i}` : `/loser/${props.i}`}> 
       <div className="card mh-30" style={{"width": "18rem"}}>
