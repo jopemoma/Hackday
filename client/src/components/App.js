@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   fetchingRandomMovie() {
-    fetch('http://localhost:5000/random-movie')
+    fetch('/random-movie')
     .then(res => res.json())
     .then(data => {
      !this.state.movies ? this.setState({movies:[data]}) : this.setState({movies: [...this.state.movies, data]})  
@@ -35,8 +35,8 @@ class App extends React.Component {
             <>
               <div className="jumbotron jumbotron-fluid mh-10">
                 <div className="container mh-5 d-flex flex-column align-items-center">
-                  <h1 className="display-10">Which movie is worst?</h1>
-                  <p className="lead">Choose the movie that has lowest rating at IMDb</p>
+                  <h1 className="display-10">Which movie is worse?</h1>
+                  <p className="lead">Choose the movie that has lower rating at IMDb</p>
                 </div>
               </div>
               <div className="d-flex flex-row justify-content-around align-items-center flex-wrap h-100">
